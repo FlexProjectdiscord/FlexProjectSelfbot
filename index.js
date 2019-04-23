@@ -10,6 +10,7 @@ var listperm = ["CREATE_INSTANT_INVITE","KICK_MEMBERS","BAN_MEMBERS","ADMINISTRA
 "USE_VAD","PRIORITY_SPEAKER","CHANGE_NICKNAME","MANAGE_NICKNAMES","MANAGE_ROLES","MANAGE_WEBHOOKS","MANAGE_EMOJIS"]
 
 
+ 
 bot.on("message", message => {
     if(message.author.id === bot.user.id){
         var args = message.content.split(" ");
@@ -228,7 +229,7 @@ bot.on("message", message => {
     switch(args[0]){
         case `${prefix}help`:
         var embed = new discord.RichEmbed()
-        if(args[1] != "moderation" && args[1] != "utiles" && args[1] != "fun"){
+        if(args[1] != "moderation" && args[1] != "utiles" && args[1] != "fun" && args[1] != "perm"){
             embed.setColor("RANDOM")
             embed.setAuthor("Help FlexProject", bot.user.avatarURL)
             embed.addField("Commandes **fun** 😝", `**\`${prefix}help fun\`**`)
@@ -241,7 +242,7 @@ bot.on("message", message => {
             embed.setColor("RANDOM")
             embed.setAuthor("Help Modération FlexProject", bot.user.avatarURL)
             embed.addField(`${prefix}ban`, `Utilisation : \`${prefix}ban @mentiondumembreaban raison\``)
-            embed.addField(`${prefix}kick`, `Utilisation : \`${prefix}kick @mentiondumembreaban raison\``)
+            embed.addField(`${prefix}kick`, `Utilisation : \`${prefix}kick @mentiondumembreakick raison\``)
             embed.addField(`${prefix}unban`, `Utilisation : \`${prefix}unban iddumembreadeban\``)
             embed.addField(`${prefix}createchan`, `Utilisation : \`${prefix}createchan nomduchan type\` (Type = text ou voice)`)
             embed.addField(`${prefix}delchan`, `Utilisation : \`${prefix}delchan idduchan type\``)
