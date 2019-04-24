@@ -14,4 +14,4 @@ Variable à changer :
 - prefix
 - token 
  
-Pour plus d'info : https://discord.gg/7XTFN8d
+Pour plus d'info : https://discord.gg/3CCgb85
